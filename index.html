@@ -1,0 +1,86 @@
+<html>
+<title>MyHTML</title>
+
+<head>
+    <style>
+        body{
+            background-color:brown;
+        }
+        h1 {
+            background-color: bisque;
+            text-align: center;
+            border: 1px solid black;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+
+        }
+
+        .form_1 {
+            background-color: aquamarine;
+            width:fit-content;
+            margin: auto;
+            border: 1px dashed;
+        }
+        #login_button{
+            
+            text-align: center;
+            
+        }
+        #login{
+            width:50%;
+        }
+        #result{
+            text-align: center;
+            font-size: larger;
+            font-weight: 300;
+            color: yellow;
+            font-style: italic;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Sample html form</h1>
+    <form class="form_1" action="#" onsubmit = "return false">
+        <table>
+            <tr>
+                <td>User Name: </td>
+                <td><input type="text" id="Name" placeholder="Enter your Username" autocomplete="off"/></td>
+            </tr>
+            <tr>
+            <td>Password: </td>
+            <td><input type="password" id="Password" placeholder="Enter your password" /></td>
+            </tr>
+        </table>
+        <div id = login_button>
+        <input id = "login" type = "submit" value = "Login" onclick="f()"/>
+        </div>
+        </form>
+        <div id="result"></div>
+        <script>
+            function f()
+            {
+                var Name =  document.getElementById("Name").value;
+                var pass = document.getElementById("Password").value;
+
+                if(Name == "piyush.9868" && pass == "piyush@123")
+                {
+                    document.getElementById("result").innerHTML = "Login SuccessFul!!";
+                }
+                else
+                {
+                   alert("Login Failed!");
+                    
+                }
+
+            }
+        </script>
+
+    
+</body>
+<footer>
+    <!--Done-->
+</footer>
+
+</html>
